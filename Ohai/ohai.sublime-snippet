@@ -1,7 +1,7 @@
 <snippet>
 	<content><![CDATA[
-ohai "reload" do
-	action :reload
+ohai 'reload' do
+  action :reload
 end
 
 ]]></content>

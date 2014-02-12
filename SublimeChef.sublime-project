@@ -8,7 +8,8 @@
 	"settings":
 	{
 		"tab_size": 2,
-		"translate_tabs_to_spaces": false,
-		"detect_indentation": true
+		"translate_tabs_to_spaces": true,
+		"detect_indentation": false,
+		"use_tab_stops": true
 	}
 }

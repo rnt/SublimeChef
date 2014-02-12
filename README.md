@@ -32,8 +32,10 @@ These are the available completions:
 	retries
 	supports
 	not_ifd
+	not_if{
 	not_if
 	only_ifd
+	only_if{
 	only_if
 	cookbook_filef
 	cookbook_file
