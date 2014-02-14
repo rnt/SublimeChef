@@ -9,6 +9,7 @@ cookbook_file '${1:name}' do
   mode '${7:0644}'
   backup ${8:5}
   cookbook '${9:cookbook}'
+  manage_symlink_source ${10:nil}
 end
 
 ]]></content>
