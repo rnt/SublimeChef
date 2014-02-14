@@ -8,6 +8,7 @@ file '${1:name}' do
 	group '${6:root}'
 	mode '${7:0644}'
 	content '${8:content here}'
+	manage_symlink_source ${9:nil}
 end
 
 ]]></content>
