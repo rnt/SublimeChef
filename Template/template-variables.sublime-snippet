@@ -5,7 +5,12 @@ template '${1:name}' do
   owner 'root'
   group 'root'
   mode '0644'
-  variables( ${3::config_var => node[:configs][:config_var]} )
+  variables(
+    ${3:fqdn: node[:fqdn]}
+  )
+  backup ${4:5}
+  cookbook '${5:cookbook}'
+  manage_symlink_source ${6:nil}
 end
 
 ]]></content>
