@@ -10,7 +10,7 @@ subversion '${1:name}' do
   svn_password '${8:password}'
   svn_arguments '${9:--no-auth-cache --non-interactive --trust-server-cert}'
   svn_info_args '${10:}'
-  action ${11:sync}
+  action ${11::sync}
 end
 
 ]]></content>
