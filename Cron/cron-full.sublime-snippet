@@ -12,6 +12,7 @@ cron '${1:name}' do
   path '${10:/bin:/usr/bin}'
   home '${11:/tmp}'
   shell '${12:/bin/bash}'
+  action ${13::create}
 end
 
 ]]></content>
