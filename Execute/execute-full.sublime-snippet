@@ -5,7 +5,7 @@ execute '${1:name}' do
   command '${3:ls -la}'
   creates '${4:/tmp/something}'
   cwd '${5:/tmp}'
-  environment ({${6:'HOME' => '/home/myhome'}})
+  environment(${6:'HOME' => '/home/myhome'})
   user '${7:root}'
   group '${8:root}'
   path '${9:['/opt/bin','/opt/sbin']}'
