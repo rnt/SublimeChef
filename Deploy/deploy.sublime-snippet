@@ -1,20 +1,5 @@
 <snippet>
 	<content><![CDATA[
-<<<<<<< HEAD
-deploy '/my/deploy/dir' do
-  repo 'git@github.com/whoami/project'
-  revision 'abc123' # or 'HEAD' or 'TAG_for_1.0' or (subversion) '1234'
-  user 'deploy_ninja'
-  enable_submodules true
-  migrate true
-  migration_command 'rake db:migrate'
-  environment 'RAILS_ENV' => 'production', 'OTHER_ENV' => 'foo'
-  shallow_clone true
-  action :deploy # or :rollback
-  restart_command 'touch tmp/restart.txt'
-  git_ssh_wrapper 'wrap-ssh4git.sh'
-  scm_provider Chef::Provider::Git # is the default, for svn: Chef::Provider::Subversion
-=======
 deploy '${1:/my/deploy/dir}' do
   repo '${2:git@github.com/whoami/project}'
   revision '${3:abc123}' # or 'HEAD' or 'TAG_for_1.0' or (subversion) '1234'
@@ -28,7 +13,6 @@ deploy '${1:/my/deploy/dir}' do
   restart_command '${14:touch tmp/restart.txt}'
   git_ssh_wrapper '${15:wrap-ssh4git.sh}'
   scm_provider ${16:Chef::Provider::Git} # is the default, for svn: Chef::Provider::Subversion
->>>>>>> 9463f1d7d872457718cd69f9588074b403014f62
 end
 
 ]]></content>
