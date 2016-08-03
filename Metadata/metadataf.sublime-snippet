@@ -1,23 +1,22 @@
 <snippet>
   <content><![CDATA[
-name             'example'
-maintainer       'YOUR_COMPANY_NAME'
-maintainer_email 'YOUR_EMAIL'
-license          'All rights reserved'
-description      'Installs/Configures example'
+name             '${1:example}'
+maintainer       '${2:YOUR_COMPANY_NAME}'
+maintainer_email '${3:YOUR_EMAIL}'
+license          '${4:All rights reserved}'
+description      '${5:Installs/Configures example}'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          '0.1.0'
-depends          'package'
-attribute        'pets/cat/name', :display_name => 'Cat Name'
-grouping         'pets/cat', :title => 'Cat Options'
-conflicts        'package'
-provides         'service[example]'
-recipe           'example::one', 'Description for example'
-recommends       'package'
-replaces         'package'
-supports         'ubuntu'
-suggests         'package'
-$0
+version          '${6:0.1.0}'
+depends          '${7:package}'
+attribute        ${8:'pets/cat/name', display_name: 'Cat Name'}
+grouping         ${9:'pets/cat', title: 'Cat Options'}
+conflicts        '${10:package}'
+provides         '${11:service[example]}'
+recipe           '${12:example::one', 'Description for example}'
+recommends       '${13:package}'
+replaces         '${14:package}'
+supports         '${15:ubuntu}'
+suggests         '${16:package}'
 ]]></content>
   <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
   <tabTrigger>metadataf</tabTrigger>

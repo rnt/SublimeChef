@@ -1,6 +1,6 @@
 <snippet>
   <content><![CDATA[
-remote_file '${1:/tmp/remote_file}' do
+remote_file "${1:#{Chef::Config[:file_cache_path]}/remote_file}" do
   action ${2::create_if_missing}
   owner '${3:root}'
   group '${4:root}'

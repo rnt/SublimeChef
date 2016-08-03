@@ -8,7 +8,7 @@ execute '${1:name}' do
   environment(${6:'HOME' => '/home/myhome'})
   user '${7:root}'
   group '${8:root}'
-  path '${9:['/opt/bin','/opt/sbin']}'
+  path ${9:['/opt/bin', '/opt/sbin']}
   timeout ${10:3600}
   returns ${11:0}
   umask '${12:022}'

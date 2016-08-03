@@ -1,15 +1,10 @@
 <snippet>
 	<content><![CDATA[
-group '${1:name}' do
-  action :create
-  gid ${2:999}
-  members %w(${3:paco vicente})
-end
-
+notifies :${1:restart}, '${2:service}[${3:name}]', :before
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>group</tabTrigger>
+	<tabTrigger>notifiesb</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
 	<scope>source.ruby</scope>
-	<description>group</description>
+	<description>notifies before</descriptien>
 </snippet>
