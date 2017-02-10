@@ -2,14 +2,29 @@
   <content><![CDATA[
 remote_file "#{Chef::Config[:file_cache_path]}/${1:filename}" do
   action ${2::create}
-  backup ${3:5}
-  owner '${4:root}'
-  group '${5:root}'
-  mode '${6:0644}'
-  source '${7:http://www.example.com/remote_file}'
-  checksum '${8:sha256checksum}'
+  path "#{Chef::Config[:file_cache_path]}/${3:filename}"
+  backup ${4:5}
+  owner '${5:root}'
+  group '${6:root}'
+  mode '${7:0644}'
+  source '${8:http://www.example.com/remote_file}'
+  checksum '${9:sha256checksum}'
+  atomic_update '${10:true}'
+  force_unlink '${11:false}'
+  ftp_active_mode '${12:false}'
+  headers({${13}})
+  ignore_failure '${14:false}'
+  manage_symlink_source '${15:nil}'
+  notifies :restart, 'service[${16:name}]', :immediately
+  provider '${17:Chef::Provider::File::RemoteFile}'
+  retries '${18:0}'
+  retry_delay '${19:2}'
+  subscribes :restart, 'template[${20:name}]', :before
+  use_conditional_get '${21:true}'
+  use_etag '${22:true}'
+  use_last_modified '${23:true}'
+  verify '${24:httpd -t -f %{path}}'
 end
-
 ]]></content>
   <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
   <tabTrigger>remote_filef</tabTrigger>
