@@ -1,18 +1,17 @@
 <snippet>
 	<content><![CDATA[
-if Chef::Config[:solo]
-  nodes = []
-else
-  nodes = search(
-    :nodes,
-    'roles:rolesname',
-    filter_result: {
-      'hostname' => ['hostname'],
-      'ipaddress' => ['ipaddress'],
-      'kernel_version' => %w(kernel version)
-    }
-  )
-end
+nodes = if Chef::Config[:solo]
+          []
+        else
+          search(
+            :node,
+            "chef_environment:#{node.chef_environment} AND roles:role_name",
+            filter_result: {
+              'hostname' => ['hostname'],
+              'kernel_version' => %w(kernel version)
+            }
+          )
+        end
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>search_nodes</tabTrigger>
