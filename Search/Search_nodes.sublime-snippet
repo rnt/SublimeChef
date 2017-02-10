@@ -1,0 +1,18 @@
+<snippet>
+	<content><![CDATA[
+search(
+  :nodes,
+  'roles:rolesname',
+  filter_result: {
+    'hostname' => ['hostname'],
+    'ipaddress' => ['ipaddress'],
+    'kernel_version' => %w(kernel version)
+  }
+)
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>search_nodes</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.ruby</scope>
+	<description>search nodes with filter_result (partial_search)</description>
+</snippet>
